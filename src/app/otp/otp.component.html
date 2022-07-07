@@ -1,0 +1,14 @@
+<form action="" (ngSubmit)="verifyOtp()" >
+
+    <!-- <input  class="otp-frm-sbt" type="text" formControlName="otp"> -->
+  
+   <div class="otp-frm-sbt" id="otp-form-box">
+       <input type="text" class="otp-txt" maxlength="1" placeholder="*" id='ist'  #txt1 (keyup)="move($event, '' , txt1, txt2)"/>
+       <input type="text" class="otp-txt" maxlength="1" placeholder="*" id='sec' #txt2 (keyup)="move($event, txt1, txt2, txt3)"/>
+       <input type="text" class="otp-txt" maxlength="1" placeholder="*" id='third' #txt3 (keyup)="move($event, txt2, txt3, txt4)"/>
+       <input type="text" class="otp-txt" maxlength="1" placeholder="*" id='fourth' #txt4 (keyup)="move($event, txt3, txt4, '')"/>
+   </div>
+
+    
+   <button type="submit" >submit</button>
+</form>
